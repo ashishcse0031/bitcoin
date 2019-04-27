@@ -1,3 +1,13 @@
+//-----------------How to generate key pair-------------------\\
+openssl ecparam -genkey -name secp256k1 -out alertkey.pem
+openssl ec -in alertkey.pem -text > alertkey.hex
+openssl ecparam -genkey -name secp256k1 -out testnetalert.pem
+openssl ec -in testnetalert.pem -text > testnetalert.hex
+openssl ecparam -genkey -name secp256k1 -out genesiscoinbase.pem
+openssl ec -in testnetalert.pem -text > genesiscoinbase.hex
+
+
+//------This is how i mine  my gen block----------------//
 ./genesis 044da73ae9d1432fd824a962f6557b54f61820f848bbeebc71d13cc5b759e5c347f38de11c662c985102afce772fcd427f6c3d3dbb68263a2f8aefe60b225b0b97 "Ashish Vishwakarma" 486604799 2083236893 1231006505
     nBits: 0x1d00ffff
     startNonce: 0
